@@ -1,0 +1,39 @@
+nav {
+  height: 66px;
+  width: 100%;
+  .nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    align-items: center;
+  }
+  .logo--container {
+    width: 200px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .right-nav--side {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    gap: 24px;
+
+    li {
+      padding: 8px;
+      transition: $transitionDuration;
+      &:hover {
+        color: $primaryColor;
+        transition: $transitionDuration;
+      }
+    }
+  }
+}
+

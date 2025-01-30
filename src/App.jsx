@@ -1,15 +1,10 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import "./scss/main.css"
+
+import "./scss/main.scss";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <HeroSection />
-    </>
-  );
+  return <LandingPage />;
 }
 
 export default App;

@@ -13,6 +13,8 @@ body {
   margin: auto;
   font-family: $fontFamily;
   position: relative;
+  color: #fff;
+  background-color: $backgroundColor;
 }
 
 h1 {
@@ -47,7 +49,7 @@ p {
   font-family: $fontFamily;
   font-size: $bodyFontSize;
   color: $bodyTextColor;
-  //   line-height: 1.3;
+    line-height: 1.3;
 }
 p.large--text{
   font-size: $L-bodyFontSize;
@@ -91,7 +93,7 @@ img {
   font-weight: 600;
 }
 .max-width {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: auto;
 }
 .max-width_1200 {
