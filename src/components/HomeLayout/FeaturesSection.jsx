@@ -1,4 +1,8 @@
-import React from "react";
+import StairsIllustration from "../../assets/images/illustration-stairs.svg";
+import CryptoCoins from "../../assets/images/crypto-coins.svg";
+import CandleIll from "../../assets/images/candle-illustration.svg";
+import ScalableIll from "../../assets/images/scalable-illustration.svg";
+import SpeedIll from "../../assets/images/speed-illustration.svg";
 
 function FeaturesSection() {
   return (
@@ -14,7 +18,9 @@ function FeaturesSection() {
         <main className="bento-grid--container">
           <article>
             <div className="content-container content--1">
-              <img src="" alt="" />
+              <div className="img-content">
+                <img src={StairsIllustration} alt="" />
+              </div>
             </div>
             <div className="content-container content--2">
               <div className="text-content">
@@ -24,6 +30,10 @@ function FeaturesSection() {
                   results are swift, driving your project forward faster than
                   you ever thought possible
                 </p>
+              </div>
+
+              <div className="img-content">
+                <img src={SpeedIll} alt="" />
               </div>
             </div>
           </article>
@@ -42,11 +52,11 @@ function FeaturesSection() {
               </div>
 
               <div className="img-content">
-                <img src="" alt="" />
+                <img src={CryptoCoins} alt="" />
               </div>
             </div>
 
-            <div className="content-container content--4">
+            <div className="content--4">
               <div className="sub__content-container sub__content--1">
                 <div className="text-content">
                   <h3>Drive FOMO – Create Urgency and Excitement</h3>
@@ -81,12 +91,12 @@ function FeaturesSection() {
                 </p>
               </div>
               <div className="img-content">
-                <img src="" alt="" />
+                <img src={ScalableIll} alt="" />
               </div>
             </div>
 
             <div className="content-container content--6">
-              <img src="" alt="" />
+              <img src={CandleIll} alt="" />
             </div>
           </article>
         </main>

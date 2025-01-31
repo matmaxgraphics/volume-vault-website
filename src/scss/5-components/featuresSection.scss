@@ -1,18 +1,117 @@
-.features-section{
-    margin-top: 64px;
+.features-section {
+  margin-top: 64px;
+  .container {
     padding: 24px;
-    header{
-        max-width: 400px;
-        margin: 0 auto 24px;
-        text-align: center;
-        h6{
-            margin-bottom: 8px;
-            font-size: 1em;
-            text-transform: uppercase;
-            font-weight: 400;
-            span{
-                color: $primaryColor;
-            }
-        }
+  }
+  header {
+    max-width: 400px;
+    margin: 0 auto 24px;
+    text-align: center;
+    h6 {
+      margin-bottom: 8px;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 400;
+      span {
+        color: $primaryColor;
+      }
     }
+  }
+
+  .bento-grid--container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    article {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      .text-content {
+        max-width: 400px;
+        h3 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    .content-container,
+    .sub__content-container {
+      border: 1px solid $strokeColor;
+      border-radius: 16px;
+      padding: 12px;
+    }
+    
+    .content-container {
+      width: 100%;
+      overflow: hidden;
+    }
+    .content--1 {
+      flex-basis: 0;
+      overflow: visible;
+      img-content {
+        width: 100%;
+      }
+      img {
+        width: max-content;
+        height: auto;
+        transform: translateY(16px);
+      }
+    }
+    .content--2,
+    .content--5 {
+      flex-basis: 1;
+      display: flex;
+      gap: 48px;
+      justify-content: space-around;
+      align-items: center;
+      .img-content {
+        transform: translateY(30px);
+      }
+    }
+    .content--3 {
+      flex-basis: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      width: 50%;
+      .text-content {
+        width: 90%;
+        max-width: unset;
+      }
+    }
+    .content--4 {
+      flex-basis: 1;
+      width: 50%;
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+      .text-content{
+        max-width: unset;
+      }
+    }
+ 
+      .sub__content--1,
+      .sub__content--2 {
+        height: 100%;
+      }
+      .sub__content-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 48px;
+      }
+
+    .content--5 {
+      flex-basis: 1;
+      .img-content {
+        transform: translateY(70px);
+      }
+    }
+    .content--6 {
+      flex-basis: 0;
+      overflow: visible;
+    }
+  }
 }
