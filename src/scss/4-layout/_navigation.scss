@@ -1,6 +1,7 @@
 nav {
   height: 66px;
   width: 100%;
+  position: relative;
   .nav-container {
     max-width: 1440px;
     margin: 0 auto;
@@ -17,6 +18,63 @@ nav {
       height: auto;
     }
   }
+
+  .hamburger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+
+    .meat {
+      border-radius: 2px;
+      width: 100%;
+      position: absolute;
+      height: 3px;
+      background: #fff;
+      display: block;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:last-child {
+        bottom: 0;
+      }
+    }
+  }
+
+  .close {
+    .meat:first-child,
+    .meat:last-child {
+      opacity: 0;
+    }
+
+    .meat:first-child {
+      transform: translateY(20px) scale(0);
+    }
+
+    .meat:last-child {
+      transform: translateY(-20px) scale(0);
+    }
+
+    .meat:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    .meat:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+
   .right-nav--side {
     display: flex;
     gap: 48px;
@@ -37,3 +95,45 @@ nav {
   }
 }
 
+@media (max-width: 820px) {
+  nav {
+    position: fixed;
+    top: 0;
+
+    .nav-container {
+      background-color: $backgroundColor;
+    //   flex-direction: column;
+    }
+    .hamburger{
+        display: block;
+    }
+    .logo--container{
+        align-self: flex-start;
+    }
+    .right-nav--side{
+        flex-direction: column;
+        gap: 24px;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        // padding-bottom: 48px;
+        background-color: $backgroundColor;
+        top: 66px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .6s ease-in-out;
+
+        &.active{
+            max-height: 600px;
+        }
+        button{
+            margin-bottom: 24px;
+        }
+
+    }
+    ul {
+        flex-direction: column;
+      }
+  }
+}
