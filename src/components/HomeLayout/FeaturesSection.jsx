@@ -3,6 +3,7 @@ import CryptoCoins from "../../assets/images/crypto-coins.svg";
 import CandleIll from "../../assets/images/candle-illustration.svg";
 import ScalableIll from "../../assets/images/scalable-illustration.svg";
 import SpeedIll from "../../assets/images/speed-illustration.svg";
+// import EthCoin from "../../assets/images/eth-coin illustration.svg"; 
 
 function FeaturesSection() {
   return (
@@ -38,7 +39,7 @@ function FeaturesSection() {
             </div>
           </article>
 
-          <article>
+          <article className="middle--content">
             <div className="content-container content--3">
               <div className="text-content">
                 <h3>
@@ -96,7 +97,9 @@ function FeaturesSection() {
             </div>
 
             <div className="content-container content--6">
+            <div className="img-content">
               <img src={CandleIll} alt="" />
+              </div>
             </div>
           </article>
         </main>
