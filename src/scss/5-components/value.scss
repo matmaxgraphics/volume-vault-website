@@ -1,0 +1,46 @@
+.value-section {
+  padding: 24px;
+  .section-flex {
+    gap: 48px;
+  }
+  .text-drscription {
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: $h4FontSize;
+    }
+    width: 50%;
+    h2,
+    p {
+      margin-bottom: 24px;
+    }
+    span {
+      color: $primaryColor;
+    }
+  }
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .value--item {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    span {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: $h4FontSize;
+    }
+    p {
+      font-size: $h3FontSize;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+@media (max-width: 800px){
+.value-section{
+    .text-drscription{
+        width: 100%;
+    }
+}
+}
