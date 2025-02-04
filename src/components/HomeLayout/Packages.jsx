@@ -40,7 +40,7 @@ function Packages() {
               <article key={vault} className={`package--item ${vaultClass}`}>
                 <div className="vault-description">
                   <span className="icon">
-                    <Icon icon="ri:flag-fill" width="24" height="24" />
+                    <Icon icon={vaultInfo.icon} width="24" height="24" />
                   </span>
                   <h4>{vault} Vault</h4>
                   <p className="vault-slogan">{vaultInfo.slogan}</p>

@@ -1,5 +1,5 @@
 .packages-section {
-  margin-bottom: 200px;
+  margin: 64px 0;
   .container {
     padding: 24px;
   }
@@ -226,4 +226,31 @@
       background-color: $packageColor-5;
     }
   }
+}
+
+
+@media (max-width: 870px){
+    .packages-section{
+        .package--item {
+            width: calc(50% - 12px);
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .packages-section{
+        .header-container {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+          }
+    }
+}
+
+@media (max-width: 580px){
+    .packages-section{
+        .package--item {
+            width: 100%;
+        }
+    }
 }
