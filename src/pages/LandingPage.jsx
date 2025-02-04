@@ -13,7 +13,7 @@ function LandingPage() {
       <HeroSection />
       <FeaturesSection />
       <Packages />
-      <ValueSection />
+      {/* <ValueSection /> */}
     </>
   );
 }

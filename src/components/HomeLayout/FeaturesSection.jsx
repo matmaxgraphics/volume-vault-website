@@ -47,7 +47,7 @@ function FeaturesSection() {
                 </h3>
                 <p>
                   No generic solutions here. VolumeVault is specifically
-                  engineered for Solana, Sui, and Base projects, ensuring
+                  engineered for Solana, BNB, and Base projects, ensuring
                   seamless execution and maximum impact.
                 </p>
               </div>
