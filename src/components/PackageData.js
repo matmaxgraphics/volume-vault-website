@@ -21,7 +21,7 @@ const vaultData = {
         "Designed for projects building their foundation and ready to gain traction in the market.",
     },
     Surge: {
-      price: "15 SOL, 528 BNB, 1 ETH",
+      price: "15 SOL, 5.28 BNB, 1 ETH",
       wallets: 5105,
       txMin: 22,
       multiplier: "x1.5",
@@ -74,7 +74,7 @@ const vaultData = {
         "Designed for projects building their foundation and ready to gain traction in the market.",
     },
     Surge: {
-      price: "15 SOL, 528 BNB, 1 ETH",
+      price: "15 SOL, 5.28 BNB, 1 ETH",
       wallets: 5105,
       txMin: 20,
       multiplier: "x1.5",
@@ -127,7 +127,7 @@ const vaultData = {
         "Designed for projects building their foundation and ready to gain traction in the market.",
     },
     Surge: {
-      price: "15 SOL, 528 BNB, 1 ETH",
+      price: "15 SOL, 5.28 BNB, 1 ETH",
       wallets: 5105,
       txMin: 20,
       multiplier: "x1.5",
@@ -180,7 +180,7 @@ const vaultData = {
         "Designed for projects building their foundation and ready to gain traction in the market.",
     },
     Surge: {
-      price: "15 SOL, 528 BNB, 1 ETH",
+      price: "15 SOL, 5.28 BNB, 1 ETH",
       wallets: 5105,
       txMin: 1.5,
       multiplier: "x1.5",

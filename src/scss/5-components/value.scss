@@ -37,10 +37,20 @@
   }
 }
 
-@media (max-width: 800px){
-.value-section{
-    .text-drscription{
-        width: 100%;
+@media (max-width: 800px) {
+  .value-section {
+    .text-drscription {
+      width: 100%;
     }
+  }
 }
+
+@media (max-width: 500px) {
+  .value-section{
+    .img-container{
+      p{
+        font-size: 18px;
+      }
+    }
+  }
 }
