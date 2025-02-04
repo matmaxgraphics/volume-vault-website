@@ -1,0 +1,100 @@
+.referral-section {
+  margin: 0 0 48px;
+  padding: 24px;
+  .referral-wrapper {
+    padding: 24px;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255, 0.01);
+    .text-description {
+      width: 70%;
+    }
+  }
+  header,
+  h4 {
+    margin-bottom: 16px;
+  }
+  .mg-8 {
+    margin-bottom: 8px;
+  }
+  h4 {
+    font-weight: 400;
+    color: $bodyTextColor;
+  }
+  .referral--benefits {
+    .benefit--item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      p {
+        color: $bodyTextColor;
+      }
+    }
+    span {
+      color: $primaryColor;
+    }
+  }
+  button {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .referral-section {
+    .referral-wrapper {
+      padding: 12px;
+      .text-description {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.secondary-cta-section {
+  .section-flex {
+    align-items: center;
+    gap: 32px;
+  }
+  .secondary-cta--wrapper {
+    .text-description {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    h2,
+    p {
+      max-width: 550px;
+    }
+    .img-container {
+      img {
+        width: 80%;
+      }
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    .arrow-icon {
+      background-color: $backgroundColor;
+      padding: 8px;
+      border-radius: 100%;
+      color: #fff;
+      font-size: 48px;
+      margin-top: 2px;
+    }
+  }
+}
+
+@media (max-width: 800px){
+    .secondary-cta-section {
+        .secondary-cta--wrapper {
+          .img-container {
+            img {
+              width: 100%;
+            }
+          }
+        }
+    
+      }
+}
