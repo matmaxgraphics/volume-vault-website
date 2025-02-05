@@ -24,14 +24,14 @@ footer {
     margin-bottom: 32px;
     ul{
         display: flex;
-        gap: 16px;
+        gap: 24px;
     }
     li:hover{
         color: $primaryColor;
         transition: $transitionDuration color;
     }
     .social-icon{
-        font-size: 24px;
+        font-size: 32px;
     }
   }
   .copyright-container{
