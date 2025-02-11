@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import faqsData from "../FaqsData";
 
+import FadeUpAnimation from "../Animations/FadeUpAnimation";
+
 function Faqs() {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -11,7 +13,9 @@ function Faqs() {
   return (
     <section className="faqs-section">
       <div className="max-width">
-        <h2>Frequently Asked Questions</h2>
+        <FadeUpAnimation>
+          <h2>Frequently Asked Questions</h2>
+        </FadeUpAnimation>
         <div className="faqs--wrapper">
           {faqsData.map((faq, index) => (
             <article
@@ -19,13 +23,20 @@ function Faqs() {
               className={`faq--item ${openFaq === index ? "open" : ""}`}
               onClick={() => toggleFaq(index)}
             >
-              <div className="faq--question">
-                <h5>{faq.question}</h5>{" "}
-                <Icon icon="ri:arrow-down-s-line" className={`dropdown-icon ${openFaq === index ? "rotate" : ""}`} />
-              </div>
-              <div className="faq--answer">
-                <p>{faq.answer}</p>
-              </div>
+              <FadeUpAnimation>
+                <div className="faq--question">
+                  <h5>{faq.question}</h5>{" "}
+                  <Icon
+                    icon="ri:arrow-down-s-line"
+                    className={`dropdown-icon ${
+                      openFaq === index ? "rotate" : ""
+                    }`}
+                  />
+                </div>
+                <div className="faq--answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </FadeUpAnimation>
             </article>
           ))}
         </div>
