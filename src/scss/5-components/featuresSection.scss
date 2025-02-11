@@ -271,7 +271,9 @@
       .content--2,
       .content--5 {
         gap: 24px;
+        max-height: 600px;
         .img-content {
+          max-height: 250px;
           img {
             width: 100%;
           }
@@ -289,7 +291,7 @@
   .features-section {
     .bento-grid--container {
       .content--2 {
-        max-height: 450px;
+        // max-height: 450px;
         .img-content {
           svg{
             min-width: 340px !important;
