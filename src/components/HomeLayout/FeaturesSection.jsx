@@ -1,11 +1,50 @@
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import Lottie from "lottie-react";
+import scalableAnimation from "../../assets/images/scalableAnime.json";
+import cryptoCoinAnimation from "../../assets/images/cryptoCoinAnim.json";
+import speedAnimation from "../../assets/images/speedAnimation.json";
+
 import StairsIllustration from "../../assets/images/illustration-stairs.svg";
 import CryptoCoins from "../../assets/images/crypto-coins.svg";
 import CandleIll from "../../assets/images/candle-illustration.svg";
 import ScalableIll from "../../assets/images/scalable-illustration.svg";
 import SpeedIll from "../../assets/images/speed-illustration.svg";
-// import EthCoin from "../../assets/images/eth-coin illustration.svg"; 
+// import EthCoin from "../../assets/images/eth-coin illustration.svg";
 
 function FeaturesSection() {
+  // const lottieRef = useRef(null);
+  // const { ref, inView } = useInView({
+  //   // triggerOnce: true,
+  //   threshold: 0.5,
+  // });
+
+  // useEffect(() => {
+  //   if (inView && lottieRef.current) {
+  //     lottieRef.current.goToAndPlay(0, true);
+  //   }
+  // }, [inView]);
+
+  const speedRef = useRef(null);
+  const coinRef = useRef(null);
+  const scaleRef = useRef(null);
+
+  const { ref: speedTrigger, inView: speedInView } = useInView({ threshold: 0.5 });
+  const { ref: coinTrigger, inView: coinInView } = useInView({ threshold: 0.5 });
+  const { ref: scaleTrigger, inView: scaleInView } = useInView({ threshold: 0.5 });
+
+  useEffect(() => {
+    if (speedInView && speedRef.current) speedRef.current.goToAndPlay(0, true);
+  }, [speedInView]);
+
+  useEffect(() => {
+    if (coinInView && coinRef.current) coinRef.current.goToAndPlay(0, true);
+  }, [coinInView]);
+
+  useEffect(() => {
+    if (scaleInView && scaleRef.current) scaleRef.current.goToAndPlay(0, true);
+  }, [scaleInView]);
+
   return (
     <section className="features-section">
       <div className="max-width container">
@@ -23,7 +62,7 @@ function FeaturesSection() {
                 <img src={StairsIllustration} alt="" />
               </div>
             </div>
-            <div className="content-container content--2">
+            <div className="content-container content--2" ref={speedTrigger}>
               <div className="text-content">
                 <h3>Unmatched Speed – Results in Record Time</h3>
                 <p>
@@ -34,13 +73,19 @@ function FeaturesSection() {
               </div>
 
               <div className="img-content">
-                <img src={SpeedIll} alt="" />
+                {/* <img src={SpeedIll} alt="" /> */}
+                <Lottie
+                  lottieRef={speedRef}
+                  animationData={speedAnimation}
+                  autoplay={false}
+                  loop={false}
+                />
               </div>
             </div>
           </article>
 
           <article className="middle--content">
-            <div className="content-container content--3">
+            <div className="content-container content--3" ref={coinTrigger}>
               <div className="text-content">
                 <h3>
                   Tailored to Top Chains – Built for Solana, BNB, and Base
@@ -53,7 +98,13 @@ function FeaturesSection() {
               </div>
 
               <div className="img-content">
-                <img src={CryptoCoins} alt="" />
+                {/* <img src={CryptoCoins} alt="" /> */}
+                <Lottie
+                  lottieRef={coinRef}
+                  animationData={cryptoCoinAnimation}
+                  autoplay={false}
+                  loop={false}
+                />
               </div>
             </div>
 
@@ -82,7 +133,7 @@ function FeaturesSection() {
           </article>
 
           <article>
-            <div className="content-container content--5">
+            <div className="content-container content--5" ref={scaleTrigger}>
               <div className="text-content">
                 <h3>Scalable Solutions – Grow Without Limits</h3>
                 <p>
@@ -92,13 +143,19 @@ function FeaturesSection() {
                 </p>
               </div>
               <div className="img-content">
-                <img src={ScalableIll} alt="" />
+                {/* <img src={ScalableIll} alt="" /> */}
+                <Lottie
+                  lottieRef={scaleRef}
+                  animationData={scalableAnimation}
+                  autoplay={false}
+                  loop={false}
+                />
               </div>
             </div>
 
             <div className="content-container content--6">
-            <div className="img-content">
-              <img src={CandleIll} alt="" />
+              <div className="img-content">
+                <img src={CandleIll} alt="" />
               </div>
             </div>
           </article>

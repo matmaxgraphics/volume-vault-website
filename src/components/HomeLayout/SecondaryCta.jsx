@@ -1,12 +1,24 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import Lottie from "lottie-react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import ctaSectAnimation from "../../assets/images/ctaAnimation.json";
+
 import secondaryIll from "../../assets/images/sec-cta-ill.svg"
 
 function SecondaryCta() {
+  const ctaRef = useRef(null);
+
+  const { ref: ctaTrigger, inView: ctaInView } = useInView({ threshold: 0.5 });
+
+  useEffect(() => {
+    if (ctaInView && ctaRef.current) ctaRef.current.goToAndPlay(0, true);
+  }, [ctaInView]);
+
   return (
     <section className="secondary-cta-section">
       <div className="max-width">
-        <div className="secondary-cta--wrapper section-flex">
+        <div className="secondary-cta--wrapper section-flex" ref={ctaTrigger}>
           <div className="text-description">
             <h2>Boost Your Volume with VolumeVault</h2>
             <p>
@@ -23,7 +35,13 @@ function SecondaryCta() {
             </button>
           </div>
           <div className="img-container">
-    <img src={secondaryIll} alt="" />
+    {/* <img src={secondaryIll} alt="" /> */}
+    <Lottie
+                  lottieRef={ctaRef}
+                  animationData={ctaSectAnimation}
+                  autoplay={false}
+                  loop={false}
+                />
           </div>
         </div>
       </div>
