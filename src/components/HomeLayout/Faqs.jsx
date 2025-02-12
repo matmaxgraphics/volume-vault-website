@@ -11,7 +11,7 @@ function Faqs() {
     setOpenFaq(openFaq === index ? null : index);
   };
   return (
-    <section className="faqs-section">
+    <section className="faqs-section" id="faqs-section">
       <div className="max-width">
         <FadeUpAnimation>
           <h2>Frequently Asked Questions</h2>

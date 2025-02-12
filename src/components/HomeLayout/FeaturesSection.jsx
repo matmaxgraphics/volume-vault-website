@@ -54,7 +54,7 @@ function FeaturesSection() {
   }, [scaleInView]);
 
   return (
-    <section className="features-section">
+    <section className="features-section" id="features-section">
       <div className="max-width container">
         <header>
           <FadeUpAnimation>

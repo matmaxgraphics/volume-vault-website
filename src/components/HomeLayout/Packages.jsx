@@ -15,7 +15,7 @@ function Packages() {
   };
 
   return (
-    <section className="packages-section ">
+    <section className="packages-section" id="packages-section">
       <div className="container max-width">
         <div className="header-container">
           <header>

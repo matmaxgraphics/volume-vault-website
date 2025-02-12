@@ -19,17 +19,17 @@ function Navbar() {
         </div>
 
         <div className={["right-nav--side", toggled && 'active'].filter(Boolean).join(' ')}>
-          <ul className="nav--links">
-            <a href="">
+          <ul className="nav--links" onClick={()=> setToggled(!toggled)}>
+            <a href="#features-section">
               <li>Features</li>
             </a>
-            <a href="">
+            <a href="#packages-section">
               <li>Packages</li>
             </a>
-            <a href="">
+            <a href="#referral-section">
               <li>Referral</li>
             </a>
-            <a href="">
+            <a href="#faqs-section">
               <li>FAQs</li>
             </a>
           </ul>

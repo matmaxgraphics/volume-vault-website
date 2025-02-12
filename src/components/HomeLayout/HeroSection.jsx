@@ -5,7 +5,7 @@ import FadeUpAnimation from "../Animations/FadeUpAnimation";
 function HeroSection() {
   return (
     <>
-      <section className="hero-section">
+      <section className="hero-section" id="hero-section">
         <div className="section-flex max-width">
           <div className="text-description">
             <FadeUpAnimation>
@@ -28,7 +28,7 @@ function HeroSection() {
           </div>
           <div className="img-container">
             <FadeUpAnimation>
-              <img src={Logo} alt="" />
+              <img src={Logo} alt="illustration showing SOL, BNB, and Base market coin" />
             </FadeUpAnimation>
           </div>
         </div>

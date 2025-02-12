@@ -6,7 +6,7 @@ import FadeUpAnimation from "../Animations/FadeUpAnimation";
 
 function Referral() {
   return (
-    <section className="referral-section">
+    <section className="referral-section" id="referral-section">
       <div className="referral-wrapper max-width">
         <main className="section-flex">
           <div className="text-description">
