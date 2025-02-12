@@ -124,9 +124,11 @@ nav {
         overflow: hidden;
         max-height: 0;
         transition: max-height .6s ease-in-out;
+        padding-top: 0;
 
         &.active{
             max-height: 600px;
+            padding-top: 24px;
         }
         button{
             margin-bottom: 24px;

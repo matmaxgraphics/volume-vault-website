@@ -52,7 +52,7 @@
   .faqs-section {
     .faq--question {
       h5 {
-        max-width: 400px;
+        width: -webkit-fill-available;
       }
     }
   }
