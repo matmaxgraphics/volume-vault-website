@@ -56,9 +56,11 @@
   }
   .secondary-cta--wrapper {
     .text-description {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
     }
     h2,
     p {
@@ -86,15 +88,14 @@
   }
 }
 
-@media (max-width: 800px){
-    .secondary-cta-section {
-        .secondary-cta--wrapper {
-          .img-container {
-            img {
-              width: 100%;
-            }
-          }
+@media (max-width: 800px) {
+  .secondary-cta-section {
+    .secondary-cta--wrapper {
+      .img-container {
+        img {
+          width: 100%;
         }
-    
       }
+    }
+  }
 }
