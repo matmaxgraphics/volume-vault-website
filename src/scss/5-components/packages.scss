@@ -142,89 +142,89 @@
     }
   }
 
-  .spark-package {
-    .vault-description{
-        background-color: $packageColor-1;
-    }
-    h4.price,
-    span {
-      color: $packageColor-1;
-    }
-    .vault-description {
+}
+.spark-package {
+  .vault-description{
       background-color: $packageColor-1;
-    }
-    .icon{
-        background-color: #7246EC;
-    }
-    button {
-      background-color: $packageColor-1;
-    }
   }
-  .ignite-package {
-    .vault-description{
-        background-color: $packageColor-2;
-    }
-    h4.price,
-    span {
-      color: $packageColor-2;
-    }
-    .icon{
-        background-color: #3C6BF6;
-    }
-    button {
+  h4.price,
+  span {
+    color: $packageColor-1;
+  }
+  .vault-description {
+    background-color: $packageColor-1;
+  }
+  .icon{
+      background-color: #7246EC;
+  }
+  button {
+    background-color: $packageColor-1;
+  }
+}
+.ignite-package {
+  .vault-description{
       background-color: $packageColor-2;
-    }
   }
+  h4.price,
+  span {
+    color: $packageColor-2;
+  }
+  .icon{
+      background-color: #3C6BF6;
+  }
+  button {
+    background-color: $packageColor-2;
+  }
+}
 
-  .surge-package {
-    .vault-description{
-        background-color: $packageColor-3;
-    }
-    
-    h4.price,
-    span {
-      color: $packageColor-3;
-    }
-    .icon{
-        background-color: #FA6B7C;
-    }
-    button {
+.surge-package {
+  .vault-description{
       background-color: $packageColor-3;
-    }
   }
+  
+  h4.price,
+  span {
+    color: $packageColor-3;
+  }
+  .icon{
+      background-color: #FA6B7C;
+  }
+  button {
+    background-color: $packageColor-3;
+  }
+}
 
-  .titan-package {
-    .vault-description{
-        background-color: $packageColor-4;
-    }
-    .icon{
-        background-color: #0AEAAE;
-    }
-    h4.price,
-    span {
-      color: $packageColor-4;
-    }
-    button {
+.titan-package {
+  .vault-description{
       background-color: $packageColor-4;
-    }
+  }
+  .icon{
+      background-color: #0AEAAE;
+  }
+  h4.price,
+  span {
+    color: $packageColor-4;
+  }
+  button {
+    background-color: $packageColor-4;
+  }
+}
+
+
+.supreme-package {
+  .vault-description{
+      background-color: $packageColor-5;
+  }
+  .icon{
+      background-color: #474747;
+  }
+  h4.price,
+  span {
+    color: $packageColor-4;
   }
 
-
-  .supreme-package {
-    .vault-description{
-        background-color: $packageColor-5;
-    }
-    .icon{
-        background-color: #474747;
-    }
-    h4.price,
-    span {
-      color: $packageColor-4;
-    }
-
-    button {
-      background-color: $packageColor-5;
-    }
+  button {
+    background-color: $packageColor-5;
   }
 }
 

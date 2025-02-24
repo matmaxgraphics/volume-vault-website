@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
-// Calculation function
 function calculateVolume(
   solPrice,
   bnbPrice,
@@ -10,23 +10,6 @@ function calculateVolume(
   durationMinutes,
   multiplier
 ) {
-  // Validate inputs
-  if (
-    [
-      solPrice,
-      bnbPrice,
-      ethPrice,
-      packagePrices.SOL,
-      packagePrices.BNB,
-      packagePrices.ETH,
-      tradesPerMinute,
-      durationMinutes,
-      multiplier,
-    ].some((value) => isNaN(value))
-  ) {
-    return "Invalid input. Please enter valid numbers.";
-  }
-
   // Calculate total package price in USD
   const totalPackageUSD =
     packagePrices.SOL * solPrice +
@@ -38,8 +21,9 @@ function calculateVolume(
 
   // Calculate estimated volume in USD and apply multiplier
   const finalVolume = totalTrades * totalPackageUSD * multiplier;
+  const inMillions = finalVolume / 1000000;
 
-  return finalVolume.toFixed(2);
+  return inMillions.toFixed(2) + "M";
 }
 
 const VolumeCalculator = () => {
@@ -51,35 +35,43 @@ const VolumeCalculator = () => {
   // Token price multiplier (e.g., 1x, 2x, … up to 20x)
   const [multiplier, setMultiplier] = useState(1);
 
-  // Package selection: Each package includes token amounts and trades per minute.
   const packages = {
-    "Starter Booster": {
+    "Spark Vault": {
       prices: { SOL: 3, BNB: 1.06, ETH: 0.25 },
       tradesPerMinute: 14,
+      icon: "ri:flag-fill",
+      color: "spark-package",
     },
     "Ignite Vault": {
       prices: { SOL: 7, BNB: 2.46, ETH: 0.5 },
       tradesPerMinute: 18,
+      icon: "ri:sparkling-2-fill",
+      color: "ignite-package",
     },
     "Surge Vault": {
-      prices: { SOL: 15, BNB: 528, ETH: 1 },
+      prices: { SOL: 15, BNB: 5.28, ETH: 1 },
       tradesPerMinute: 22,
+      icon: "ri:rocket-2-fill",
+      color: "surge-package",
     },
     "Titan Vault": {
       prices: { SOL: 25, BNB: 8.81, ETH: 1.8 },
       tradesPerMinute: 26,
+      icon: "ri:vip-crown-2-fill",
+      color: "titan-package",
     },
     "Supreme Vault": {
       prices: { SOL: 50, BNB: 17.69, ETH: 3.6 },
       tradesPerMinute: 32,
+      icon: "ri:medal-fill",
+      color: "supreme-package",
     },
   };
 
-  const [selectedPackage, setSelectedPackage] = useState("Starter Booster");
+  const [selectedPackage, setSelectedPackage] = useState("Spark Vault");
   const { prices, tradesPerMinute } = packages[selectedPackage];
   const durationMinutes = 1440; // Fixed duration of 24 hours
 
-  // Calculate the final estimated volume
   const estimatedVolume = calculateVolume(
     solPrice,
     bnbPrice,
@@ -98,78 +90,94 @@ const VolumeCalculator = () => {
   ).toFixed(2);
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <h2>Volume Calculator</h2>
+    <section className="calculator-section">
+      <div className="max-width">
+        <div className="section-flex">
+          <article className="text-description">
+            <h2>Calculate Your Volume Potential</h2>
+            <p className="">
+              Discover your project's trading volume potential with VolumeVault!
+              Use our interactive slider to customize your estimate and see the
+              growth your project can achieve.
+            </p>
 
-      {/* Package Selector */}
-      <div>
-        <label>Choose Package: </label>
-        <select
-          value={selectedPackage}
-          onChange={(e) => setSelectedPackage(e.target.value)}
-        >
-          {Object.keys(packages).map((pkg) => (
-            <option key={pkg} value={pkg}>
-              {pkg}
-            </option>
-          ))}
-        </select>
-      </div>
+            <p className="w-color-40">
+              Note: The bot operates for approximately <span>24 hours</span>.
+              Actual volume boosts and duration may vary depending on your
+              token’s current market conditions.
+            </p>
+          </article>
 
-      {/* Display Package Prices */}
-      <div>
-        <h3>Package Token Prices:</h3>
-        <p>SOL: {prices.SOL}</p>
-        <p>BNB: {prices.BNB}</p>
-        <p>ETH: {prices.ETH}</p>
-        <p>Total Package Price (USD): ${totalPackageUSD}</p>
-      </div>
+          <article className="img-container">
+            <div className="packages--selection">
+              <p>Select Package:</p>
+              <div className="packages--wrapper">
+                {Object.keys(packages).map((pkg) => (
+                  <button
+                    key={pkg}
+                    className={`package--item ${
+                      selectedPackage === pkg ? `${packages[pkg].color}` : ""
+                    }`}
+                    onClick={() => setSelectedPackage(pkg)}
+                  >
+                    <Icon icon={packages[pkg].icon} /> {pkg}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-      {/* Market Price Inputs */}
-      <div>
-        <label>Solana Price (USD): </label>
-        <input
-          type="number"
-          value={solPrice}
-          onChange={(e) => setSolPrice(parseFloat(e.target.value))}
-        />
-      </div>
-      <div>
-        <label>BNB Price (USD): </label>
-        <input
-          type="number"
-          value={bnbPrice}
-          onChange={(e) => setBnbPrice(parseFloat(e.target.value))}
-        />
-      </div>
-      <div>
-        <label>ETH Price (USD): </label>
-        <input
-          type="number"
-          value={ethPrice}
-          onChange={(e) => setEthPrice(parseFloat(e.target.value))}
-        />
-      </div>
+            <div className="prices--container">
+              <article className="token--amount">
+                <p className="sz-16">Token Amount:</p>
+                <div className="token--wrapper">
+                  <p className={packages[selectedPackage].color}>
+                    <span>{prices.SOL}</span> SOL
+                  </p>
+                  <p className={packages[selectedPackage].color}>
+                    <span>{prices.BNB}</span> BNB
+                  </p>
+                  <p className={packages[selectedPackage].color}>
+                    <span>{prices.ETH}</span> ETH
+                  </p>
+                </div>
+              </article>
 
-      {/* Multiplier Input */}
-      <div>
-        <label>Token Price Change Multiplier: </label>
-        <input
-          type="range"
-          min="1"
-          max="20"
-          step="1"
-          value={multiplier}
-          onChange={(e) => setMultiplier(parseFloat(e.target.value))}
-        />
-        <span>{multiplier}x</span>
-      </div>
+              <article className="market--price">
+                <p className="sz-16">Market Price:</p>
+                <div className="token--wrapper">
+                  <p>SOL - ${solPrice}</p>
+                  <p>BNB - ${bnbPrice}</p>
+                  <p>ETH - ${ethPrice}</p>
+                </div>
+              </article>
+            </div>
 
-      {/* Display Estimated Volume */}
-      <div>
-        <h3>Estimated Boosted Volume: ${estimatedVolume}</h3>
+            <div className="multiplier-slider">
+              <label>Token Price Change Multiplier: </label>
+              <span>{multiplier}x</span>
+              <input
+                type="range"
+                min="1"
+                max="20"
+                step="1"
+                value={multiplier}
+                onChange={(e) => setMultiplier(parseFloat(e.target.value))}
+              />
+
+              <div className="static-data">
+                <span className={packages[selectedPackage].color}>1x</span>
+                <span className={packages[selectedPackage].color}>20x</span>
+              </div>
+            </div>
+
+            <div className="estimated--boost">
+              <h3>${estimatedVolume}</h3>
+              <p>Estimated Boosted Volume</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

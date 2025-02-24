@@ -1,0 +1,108 @@
+.calculator-section {
+  .text-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .w-color-40 {
+      color: $bodyTextColor-40;
+    }
+    span {
+      color: $primaryColor;
+      font-weight: 500;
+    }
+  }
+
+  .img-container {
+    background-color: rgba(255, 255, 255, 0.01);
+    padding: 24px;
+    border-radius: 24px;
+
+    .packages--wrapper {
+      display: flex;
+      gap: 16px;
+      flex-flow: row wrap;
+      margin: 16px 0 32px;
+      button {
+        color: $bodyTextColor;
+      }
+    }
+    .prices--container {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 24px;
+      p {
+        margin-bottom: 4px;
+        background-color: unset;
+        
+      }
+      .token--wrapper{
+        p{
+          font-weight: 600;
+        }
+      }
+    }
+    .sz-16 {
+      font-size: 1em;
+      color: $bodyTextColor-40;
+      margin-bottom: 8px;
+    }
+    .multiplier-slider {
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      input {
+        width: 100%;
+      }
+    }
+    .static-data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        background-color: unset;
+        font-weight: 500;
+      }
+    }
+    .estimated--boost {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .package--item {
+      background-color: $grey-01;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+      width: max-content;
+      .iconify {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .spark-package {
+      background-color: $packageColor-1;
+      color: $packageColor-1;
+    }
+    .ignite-package {
+      background-color: $packageColor-2;
+      color: $packageColor-2;
+    }
+    .surge-package {
+      background-color: $packageColor-3;
+      color: $packageColor-3;
+    }
+    .titan-package {
+      background-color: $packageColor-4;
+      color: $packageColor-4;
+    }
+    .supreme-package {
+      background-color: $packageColor-5;
+      color: $packageColor-5;
+    }
+  }
+}
