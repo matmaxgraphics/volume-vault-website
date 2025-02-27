@@ -38,31 +38,31 @@ const VolumeCalculator = () => {
   const packages = {
     "Spark Vault": {
       prices: { SOL: 3, BNB: 1.06, ETH: 0.25 },
-      tradesPerMinute: 14,
+      tradesPerMinute: 0.5,
       icon: "ri:flag-fill",
       color: "spark-package",
     },
     "Ignite Vault": {
       prices: { SOL: 7, BNB: 2.46, ETH: 0.5 },
-      tradesPerMinute: 18,
+      tradesPerMinute: 1,
       icon: "ri:sparkling-2-fill",
       color: "ignite-package",
     },
     "Surge Vault": {
       prices: { SOL: 15, BNB: 5.28, ETH: 1 },
-      tradesPerMinute: 22,
+      tradesPerMinute: 1.5,
       icon: "ri:rocket-2-fill",
       color: "surge-package",
     },
     "Titan Vault": {
       prices: { SOL: 25, BNB: 8.81, ETH: 1.8 },
-      tradesPerMinute: 26,
+      tradesPerMinute: 2,
       icon: "ri:vip-crown-2-fill",
       color: "titan-package",
     },
     "Supreme Vault": {
       prices: { SOL: 50, BNB: 17.69, ETH: 3.6 },
-      tradesPerMinute: 32,
+      tradesPerMinute: 4,
       icon: "ri:medal-fill",
       color: "supreme-package",
     },
@@ -70,7 +70,7 @@ const VolumeCalculator = () => {
 
   const [selectedPackage, setSelectedPackage] = useState("Spark Vault");
   const { prices, tradesPerMinute } = packages[selectedPackage];
-  const durationMinutes = 1440; // Fixed duration of 24 hours
+  const durationMinutes = 60; // Fixed duration of 24 hours
 
   const estimatedVolume = calculateVolume(
     solPrice,
