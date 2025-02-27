@@ -70,7 +70,7 @@ const VolumeCalculator = () => {
 
   const [selectedPackage, setSelectedPackage] = useState("Spark Vault");
   const { prices, tradesPerMinute } = packages[selectedPackage];
-  const durationMinutes = 60; // Fixed duration of 24 hours
+  const durationMinutes = 1440; // Fixed duration of 24 hours
 
   const estimatedVolume = calculateVolume(
     solPrice,
