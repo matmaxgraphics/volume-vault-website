@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import axios from "axios";
 
 function calculateVolume(
   solPrice,
@@ -27,10 +28,43 @@ function calculateVolume(
 }
 
 const VolumeCalculator = () => {
-  // Market prices for tokens (in USD)
-  const [solPrice, setSolPrice] = useState(170);
-  const [bnbPrice, setBnbPrice] = useState(300);
-  const [ethPrice, setEthPrice] = useState(1200);
+  const [solPrice, setSolPrice] = useState(0);
+  const [bnbPrice, setBnbPrice] = useState(0);
+  const [ethPrice, setEthPrice] = useState(0);
+
+  useEffect(() => {
+    const fetchPrices = async () => {
+      const lastFetch = localStorage.getItem("lastFetchTime");
+      const now = new Date().getTime();
+
+      if (!lastFetch || now - parseInt(lastFetch) > 6 * 60 * 60 * 1000) {
+        try {
+          const response = await axios.get(
+            "https://api.coingecko.com/api/v3/simple/price",
+            {
+              params: {
+                ids: "solana,binancecoin,ethereum",
+                vs_currencies: "usd",
+                x_cg_demo_api_key: import.meta.env
+                  .VITE_REACT_APP_COIN_GECKO_KEY,
+              },
+            }
+          );
+          setSolPrice(response.data.solana.usd);
+          setBnbPrice(response.data.binancecoin.usd);
+          setEthPrice(response.data.ethereum.usd);
+        } catch (error) {
+          console.error("Error fetching crypto prices:", error);
+        }
+      } else {
+        setSolPrice(localStorage.getItem("solPrice"));
+        setBnbPrice(localStorage.getItem("bnbPrice"));
+        setEthPrice(localStorage.getItem("ethPrice"));
+      }
+    };
+
+    fetchPrices();
+  }, []);
 
   // Token price multiplier (e.g., 1x, 2x, … up to 20x)
   const [multiplier, setMultiplier] = useState(1);
