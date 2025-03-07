@@ -42,7 +42,7 @@ function Footer() {
                 <Icon icon="ri:instagram-line" className="social-icon" />
               </li>
             </a>
-            <a href="">
+            <a href="https://x.com/volumevaultbot?s=21">
               <li>
                 <Icon icon="ri:twitter-x-line" className="social-icon" />
               </li>

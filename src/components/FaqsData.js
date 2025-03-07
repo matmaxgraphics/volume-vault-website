@@ -5,7 +5,7 @@ const faqsData  = [
     },
     {
       "question": "How does VolumeVault work?",
-      "answer": "VolumeVault supercharges Solana, Sui, and Base projects with tailored 6-hour, 12-hour, 24-HOUR packages, generating up to 17,350 wallets. Starting at just 2 SOL, choose from five options to boost trading volume, attract holders, and dominate the market effortlessly!"
+      "answer": "VolumeVault supercharges Solana, BNB, and Base projects with tailored 3-hour, 6-hour, 12-hour, 24-hour packages, generating up to 17,350 wallets. Starting at just 3 SOL, 1.06 BNB, 0.25 ETH, choose from five options to boost trading volume, attract holders, and dominate the market effortlessly!"
     },
     {
       "question": "Is it possible to estimate the expected volume increase before purchasing a package?",
@@ -21,7 +21,7 @@ const faqsData  = [
     },
     {
       "question": "Am I eligible for a refund?",
-      "answer": "Refund policies are outlined in our terms and conditions. Generally, once a package is purchased and the bot has commenced operations, refunds are not provided due to the nature of the services rendered."
+      "answer": "Once a package is purchased and the bot has commenced operations, refunds are not provided due to the nature of the services rendered"
     },
     {
       "question": "Are there any extra trading fees with VolumeVault packages?",

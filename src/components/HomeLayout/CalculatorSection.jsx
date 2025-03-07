@@ -127,7 +127,7 @@ const VolumeCalculator = () => {
     <section className="calculator-section">
       <div className="max-width">
         <div className="section-flex">
-          <article className="text-description">
+          <article className="text-description" id="calculator-section">
             <h2>Calculate Your Volume Potential</h2>
             <p className="">
               Discover your project's trading volume potential with VolumeVault!
@@ -195,6 +195,9 @@ const VolumeCalculator = () => {
                 max="20"
                 step="1"
                 value={multiplier}
+                style={{
+                  accentColor: `var(--${packages[selectedPackage].color})`,
+                }}
                 onChange={(e) => setMultiplier(parseFloat(e.target.value))}
               />
 

@@ -26,6 +26,9 @@ function Navbar() {
             <a href="#packages-section">
               <li>Packages</li>
             </a>
+            <a href="#calculator-section">
+              <li>Calculator</li>
+            </a>
             <a href="#referral-section">
               <li>Referral</li>
             </a>

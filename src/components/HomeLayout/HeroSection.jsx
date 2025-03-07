@@ -14,21 +14,30 @@ function HeroSection() {
                 unmatched volume boosts
               </h1>
               <p>
-                Elevate your project beyond visibility to true market dominance.
-                With VolumeVault, boost trading volume, ignite market buzz, and
-                secure your competitive advantage today.
+                Unleash millions in trading volume for your token on Solana,
+                BNB, and Base. With VolumeVault, you’re just a few simple steps
+                away from attracting new holders, elevating your project's
+                visibility and securing your competitive edge
               </p>
-              <button className="btn cta--btn">
-                Start VolumeVault Bot{" "}
-                <span>
-                  <Icon icon="ri:arrow-right-up-line" className="arrow-icon" />
-                </span>
-              </button>
+              <a href="https://t.me/VolumeVaultBot">
+                <button className="btn cta--btn">
+                  Start VolumeVault Bot{" "}
+                  <span>
+                    <Icon
+                      icon="ri:arrow-right-up-line"
+                      className="arrow-icon"
+                    />
+                  </span>
+                </button>
+              </a>
             </FadeUpAnimation>
           </div>
           <div className="img-container">
             <FadeUpAnimation>
-              <img src={Logo} alt="illustration showing SOL, BNB, and Base market coin" />
+              <img
+                src={Logo}
+                alt="illustration showing SOL, BNB, and Base market coin"
+              />
             </FadeUpAnimation>
           </div>
         </div>

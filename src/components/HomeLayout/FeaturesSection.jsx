@@ -138,6 +138,7 @@ function FeaturesSection() {
                       elite team dedicated to your success. We’re with you every
                       step of the way.
                     </p>
+                    <a href="https://t.me/+FARqNDtvaRc1MjA0" className="link-text">Join Support group</a>
                   </div>
                 </div>
               </div>

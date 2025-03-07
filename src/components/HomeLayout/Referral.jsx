@@ -28,7 +28,7 @@ function Referral() {
                     <Icon icon="ri:robot-2-line" width="24" height="24" />
                   </span>
                   <p>
-                    Forget hold periods! Every time your referral buys a
+                    Forget hold periods! Every time your referral completes a
                     package, your commission is paid instantly and automatically
                   </p>
                 </div>
