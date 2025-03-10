@@ -22,41 +22,44 @@ function Footer() {
 
         <div className="bottom--footer">
           <ul className="quick--links">
-            <a href="">
+            <a href="#features-section">
               <li>Features</li>
             </a>
-            <a href="">
+            <a href="#packages-section">
               <li>Packages</li>
             </a>
-            <a href="">
+            <a href="#calculator-section">
+              <li>Calculator</li>
+            </a>
+            <a href="#referral-section">
               <li>Referral</li>
             </a>
-            <a href="">
+            <a href="#faqs-section">
               <li>FAQs</li>
             </a>
           </ul>
-    
+
           <ul className="social--links">
-            <a href="">
+            {/* <a href="">
               <li>
                 <Icon icon="ri:instagram-line" className="social-icon" />
               </li>
-            </a>
+            </a> */}
             <a href="https://x.com/volumevaultbot?s=21">
               <li>
                 <Icon icon="ri:twitter-x-line" className="social-icon" />
               </li>
             </a>
-            <a href="">
+            <a href="https://t.me/VolumeVaultChannel">
               <li>
                 <Icon icon="ri:telegram-2-line" className="social-icon" />
               </li>
             </a>
-            <a href="">
+            {/* <a href="">
               <li>
                 <Icon icon="ri:youtube-line" className="social-icon" />
               </li>
-            </a>
+            </a> */}
           </ul>
         </div>
         <div className="copyright-container">

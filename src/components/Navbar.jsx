@@ -36,7 +36,7 @@ function Navbar() {
               <li>FAQs</li>
             </a>
           </ul>
-          <button className="btn nav--links">Get Started</button>
+          <a href="https://t.me/VolumeVaultBot"><button className="btn nav--links">Get Started</button></a>
         </div>
       </div>
     </nav>

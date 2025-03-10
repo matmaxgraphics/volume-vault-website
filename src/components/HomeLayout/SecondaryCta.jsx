@@ -30,12 +30,17 @@ function SecondaryCta() {
                 dominating the market. Don’t wait, elevate your project’s
                 visibility with VolumeVault!
               </p>
-              <button className="btn cta--btn">
-                Start Dominating{" "}
-                <span>
-                  <Icon icon="ri:arrow-right-up-line" className="arrow-icon" />
-                </span>
-              </button>
+              <a href="https://t.me/VolumeVaultBot">
+                <button className="btn cta--btn">
+                  Start Dominating{" "}
+                  <span>
+                    <Icon
+                      icon="ri:arrow-right-up-line"
+                      className="arrow-icon"
+                    />
+                  </span>
+                </button>
+              </a>
             </FadeUpAnimation>
           </div>
           <div className="img-container">

@@ -69,15 +69,17 @@ function Packages() {
                         </li>
                       </ul>
 
-                      <button className="btn cta--btn">
-                        Get {vault.toLowerCase()} vault{" "}
-                        <span>
-                          <Icon
-                            icon="ri:arrow-right-up-line"
-                            className="arrow-icon"
-                          />
-                        </span>
-                      </button>
+                      <a href="https://t.me/VolumeVaultBot">
+                        <button className="btn cta--btn">
+                          Get {vault.toLowerCase()} vault{" "}
+                          <span>
+                            <Icon
+                              icon="ri:arrow-right-up-line"
+                              className="arrow-icon"
+                            />
+                          </span>
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </article>
