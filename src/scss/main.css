@@ -197,6 +197,7 @@ footer .bottom--footer {
 footer .bottom--footer ul {
   display: flex;
   gap: 24px;
+  flex-flow: row wrap;
 }
 footer .bottom--footer li:hover {
   color: #00AC3C;
@@ -727,7 +728,7 @@ nav ul li:hover {
   background-color: #1E1E1E;
   padding: 12px;
   border-radius: 24px;
-  width: calc(33.3% - 24px);
+  width: calc(33.3% - 16px);
 }
 .packages-section .package--item .icon {
   margin-bottom: 16px;
@@ -852,6 +853,14 @@ nav ul li:hover {
     width: 100%;
   }
 }
+:root {
+  --spark-package: #5D2BE9;
+  --ignite-package: #1A51F4;
+  --surge-package: #F94B60;
+  --titan-package: #09CA96;
+  --supreme-package: #333333;
+}
+
 .calculator-section .text-description {
   display: flex;
   flex-direction: column;
