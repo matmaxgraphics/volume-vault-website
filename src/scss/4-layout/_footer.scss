@@ -25,6 +25,7 @@ footer {
     ul{
         display: flex;
         gap: 24px;
+        flex-flow: row wrap;
     }
     li:hover{
         color: $primaryColor;
